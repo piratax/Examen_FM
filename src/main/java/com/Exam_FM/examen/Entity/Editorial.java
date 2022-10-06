@@ -14,14 +14,14 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Editorial")
+@Table(name = "editorial")
 public class Editorial {
-     @Id
-    @Column(name = "Edit_id")
+    @Id
+    @Column(name = "edit_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long editId;
     
-    @Column(name = "Edit_name")
+    @Column(name = "edit_name")
     private Long editName;
     
     @Column(name = "code")

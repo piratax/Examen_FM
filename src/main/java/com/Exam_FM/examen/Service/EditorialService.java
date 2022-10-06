@@ -11,9 +11,9 @@ public interface EditorialService {
 
     public Editorial findById(Long id);
 
-    public Editorial save(Editorial categoria);
+    public Editorial save(Editorial editorial);
 
-    public void delete(Editorial categoria);
+    public void delete(Editorial editorial);
 
     public void deleteById(Long id);
 }

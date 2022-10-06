@@ -21,36 +21,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/Editorial")
+@RequestMapping("/editorial")
 @Api(value = "Microservicios de gestion de la editorial", description ="Microservicio de Editorial")
 
 public class EditorialController {
+
     @Autowired
-    private EditorialService EditorialService;
-@GetMapping("/all")
-    @ApiOperation(value="Lista de categorias")
+    private EditorialService editorialService;
+    @GetMapping("/all")
+    @ApiOperation(value="Lista de Editoriales")
     public List<Editorial> findAll() {
-        return EditorialService.findAll();
+        return editorialService.findAll();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Editorial> findById(@PathVariable Long id) {
-        Editorial editorial = EditorialService.findById(id);
+        Editorial editorial = editorialService.findById(id);
         return ResponseEntity.ok(editorial);
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id) {
-        EditorialService.deleteById(id);
+        editorialService.deleteById(id);
     }
 
     @PostMapping("/save")
     public Editorial save(@RequestBody Editorial editorial) {
-        return EditorialService.save(editorial);
+        return editorialService.save(editorial);
     }
 
     @PutMapping("/update")
     public Editorial update(@RequestBody Editorial editorial) {
-        return EditorialService.save(editorial);
+        return editorialService.save(editorial);
     }
 }
