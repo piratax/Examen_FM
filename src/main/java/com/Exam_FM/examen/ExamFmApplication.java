@@ -19,7 +19,10 @@ public class ExamFmApplication {
 	}
     @Bean
 public Docket productApi() {
-        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.Exam_FM.examen")).build();
+        return new Docket(DocumentationType.SWAGGER_2)
+        .select()
+        .apis(RequestHandlerSelectors.basePackage("com.Exam_FM.examen"))
+        .build();
     
 	}
 }

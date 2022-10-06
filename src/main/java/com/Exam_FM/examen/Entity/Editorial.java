@@ -1,4 +1,3 @@
-
 package com.Exam_FM.examen.Entity;
 
 import javax.persistence.Column;
