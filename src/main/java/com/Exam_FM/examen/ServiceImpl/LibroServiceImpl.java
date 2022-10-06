@@ -25,13 +25,13 @@ public class LibroServiceImpl implements LibroService{
         return libroRepository.findById(id).orElse(null);
     }
     @Override
-    public Libro save(Libro producto) {
-        return libroRepository.save(producto);
+    public Libro save(Libro libro) {
+        return libroRepository.save(libro);
     }
 
     @Override
-    public void delete(Libro producto) {
-        libroRepository.Libro(producto);
+    public void delete(Libro libro) {
+        libroRepository.delete(libro);
     }
 
     @Override
